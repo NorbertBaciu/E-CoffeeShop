@@ -1,0 +1,79 @@
+.login-form{
+    background-color: #373b3e;
+    width:450px;
+    height:600px;
+    margin-top:70px;
+    margin-left:250px;
+   border-style: ridge;
+    border-color: #20c997;
+    font-size:20px;
+    color:navajowhite;
+
+}
+.login-title{
+    font-size:35px;
+    margin-left:155px;
+    padding-top:5px;
+    font-family: "Javanese Text";
+
+}
+.login-form-info{
+    font-size:30px;
+    padding-top:50px;
+    padding-left:35px;
+
+}
+#LogInusername{
+    width:250px;
+    height:45px;
+    border-style: solid;
+    border-color:black;
+    font-size:30px;
+
+}
+#LogInpassword{
+    width:250px;
+    height:45px;
+    border-style:solid;
+    border-color:black;
+}
+#LogInsubmit{
+    width:150px;
+    height:40px;
+    font-size:25px;
+    margin-left:80px;
+    border-radius:30px;
+    border-color: #20c997;
+    background-color:black;
+    color: #20c997;
+    padding:2px;
+}
+.no-account{
+  color:navajowhite;
+    margin-top:140px;
+background-color:black;
+    display:flex;
+    text-ident:10em;
+
+}
+.UsernameAndPassword{
+    background-color:black;
+}
+#RegisterHereLink{
+    text-decoration:none;
+    color:navajowhite;
+}
+#error-message{
+    colo:red;
+    size:20px;
+
+}
+.error-messages{
+    background-color:black;
+    font-size:15px;
+    color:red;
+    margin-right:20px;
+    padding:5px;
+    margin-top:5px;
+}
+

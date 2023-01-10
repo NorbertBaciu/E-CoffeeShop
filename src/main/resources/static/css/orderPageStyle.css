@@ -1,0 +1,94 @@
+.order-payment-title{
+    background-color: #b6effb;
+    margin-top:15px;
+    display:flex;
+    margin-left:300px;
+    margin-right:300px;
+    padding-left:425px;
+    font-size:30px;
+    font-family: "Bodoni MT";
+    border-style: ridge;
+    border-color: #2c3034;
+}
+.user-info-block{
+
+    margin-top:30px;
+   width:1800px;
+    margin-left:40px;
+    height:650px;
+    display:flex;
+
+}
+#customer-details-title{
+    font-size:30px;
+    margin-left:170px;
+    color:antiquewhite;
+    font-family: "Berlin Sans FB";
+}
+
+#customer-details-form{
+    background-color: #4f5050;
+    margin-top:5px;
+    width:650px;
+    height:730px;
+    border-radius: 40px;
+    border-color: #f5c2c7;
+    border-style: double;
+    padding-left:40px;
+    font-size: 30px;
+}
+#customer-address-label{
+
+
+}
+#customer-address-textbox{
+    margin-left:20px;
+}
+#customer-city-textbox{
+    margin-left:73px;
+}
+#customer-county-label{
+    font-size:20px;
+}
+#customer-country-textbox{
+    margin-left:27px;
+}
+#customer-postalcode-label{
+    font-size:27px;
+}
+#customer-phonenumber-label{
+    font-size:22px;
+}
+#customer-confirmdetails-button{
+    font-size:20px;
+    margin-left:170px;
+
+}
+#card-payment-form{
+    background-color: #373b3e;
+    margin-left:300px;
+    width:800px;
+    border-radius:30px;
+    border-style: ridge;
+    border-color:darkred;
+    font-size:25px;
+    color: #f5c2c7;
+    padding-left:40px;
+
+}
+#card-payment-title{
+    font-size:30px;
+    font-family: Impact;
+}
+#card-payment-ccv{
+    margin-left:250px;
+}
+#card-payment-ccv-textbox{
+    width:50px;
+    margin-left:150px
+}
+#pay-button{
+    background-color: #bfd1ec;
+    margin-left:150px;
+    margin-top:30px;
+}

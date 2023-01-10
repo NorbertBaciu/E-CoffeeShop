@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/homePageStyle.css}">
+    <title>CatalogPage3Authorized</title>
+</head>
+<body>
+<div class="homepage">
+    <nav>
+        <div class="coffeeshoplogo">
+            <img th:src="@{/img/CoffeeLogo.jpg}" class="logo-img">
+            ~ Coffee Shop ~
+        </div>
+        <ul class = "navigation-options">
+            <li><a th:href="@{/homePageAuthorized}">Catalog</a></li>
+
+            <li>
+                <img th:src="@{/img/download.png}" class="cart-picture">
+                <a th:href="@{/homePageAuthorized/MyCartPage}">My Cart</a>
+            </li>
+            <li>
+                <img th:src="@{/img/contact_img.png}" class="contact-picture">
+                <a th:href="@{/homePageAuthorized/ContactAuthorized}">Contact</a>
+            </li>
+            <li>
+                <p sec:authentication="principal.username"></p>
+            </li>
+            <li>
+                <img th:src="@{/img/logout_picture.png}" class="logout-logo">
+
+                <a th:href="@{/homePage}">Log out</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <!-- Here I will add the Coffees types -->
+    <div class="Miel-coffee">
+        <div class="Miel-details">
+            <img th:src="@{/img/coffee_miel.jpg}" alt="Miel-Coffee-Indisp" class="Miel-image">
+
+            <div class="Miel-title">
+                Coffee Miel
+                <div class="Miel-info">
+                    <ul>
+                        <li>
+                            1 Cup Espresso
+                        </li>
+                        <li>
+                            1 tbsp Honey
+                        </li>
+                        <li>
+                            Steamed Milk
+                        </li>
+                        <li>
+                            Cinnamon
+                        </li>
+                        <li>
+                            1 Cup Miel Coffee = 14 RON
+                        </li>
+                    </ul>
+
+                    <div class="Miel-buttons">
+
+                        <form action="#" th:action="@{/process-miel}" method="post">
+                        <input type="submit"  id="miel-addToCart-Button" value="Add to Cart"></input>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Here Add Another Type of Coffee -->
+    <div class="ConPanna-coffee">
+        <div class="ConPanna-details">
+            <img th:src="@{/img/conpanna_coffee.jpg}" alt="ConPanna - Image - Indisp" class="ConPanna-image">
+            <div class="ConPanna-title">
+                Coffee Con Panna
+                <div class="ConPanna-info">
+                    <ul>
+                        <li>
+                            1 Cup Espresso
+                        </li>
+                        <li>
+                            Whiped Foam
+                        </li>
+                        <li>
+                            1 Cup Con Panna Coffee = 11 RON
+                        </li>
+                    </ul>
+                    <div class="ConPanna-buttons">
+
+                        <form action="#" th:action="@{/process-conpanna}" method="post">
+                        <input type="submit"  id="conpanna-addToCart-Button" value="Add to Cart"></input>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Catalog Search Between Pages -->
+    <div class="catalog-navigation-pages-page3">
+        <div class="page-numbers">
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            <a th:href="@{/homePageAuthorized}" class="page-numbers-style">1</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            <a th:href="@{/homePageAuthorized/CatalogPage2Authorized}" class="page-numbers-style">2</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            <a th:href="@{/homePageAuthorized/CatalogPage3Authorized}" class="page-numbers-style">3</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            <a th:href="@{/homePageAuthorized/CatalogPage4Authorized}" class="page-numbers-style">4</a>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

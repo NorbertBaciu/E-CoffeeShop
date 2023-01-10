@@ -1,0 +1,483 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+
+
+.homepage{
+    width:100%;
+    height:100vh;
+    background-image:url("../img/background_coffee.jpg");
+    background-size:cover;
+    background-position:center;
+}
+.coffeeshoplogo{
+    font-size:33px;
+    color:white;
+    font-style: oblique;
+    font-family: "Bodoni MT";
+    letter-spacing:2px;
+
+}
+nav{
+    background-color:black;
+    width:100%;
+    height:45px;
+    display:flex;
+    justify-content: space-around;
+}
+.navigation-options{
+    display:flex;
+    justify-content:space-around;
+    width:60%;
+    color:white;
+    font-size:25px;
+}
+.navigaton-options li{
+    list-style:none;
+}
+.navigation-options a{
+    color:white;
+    font-weight: revert;
+    text-decoration:none;
+}
+.cart-picture{
+    width:25px;
+    length:30px;
+}
+.logo-img{
+    width:60px;
+    height:33px;
+}
+.contact-picture{
+    width:25px;
+    height:25px;
+}
+
+.login-picture{
+    width:25px;
+    height:25px;
+}
+.register-logo{
+    width:25px;
+    height:25px;
+}
+.logout-logo{
+    width:25px;
+    height:25px;
+}
+
+.espresso-coffee {
+    padding: 50px;
+    background-color: grey;
+    margin-top: 80px;
+    margin-right: 700px;
+    margin-left: 400px;
+    border-style: solid;
+  padding-top:10px;
+    padding-left:10px;
+    padding-right:5px;
+    height: 230px;
+
+
+}
+
+.espresso-details{
+    display:flex;
+}
+.espresso-title{
+    margin-left:100px;
+    font-family: Arial;
+    font-size:30px;
+    font-weight: bolder;
+
+
+
+
+}
+.espresso-info{
+    margin-left:0px;
+    font-family: Arial;
+    font-size:20px;
+    margin-top:20px;
+    font-weight: lighter;
+}
+
+.espresso-img{
+    width:250px;
+    height:180px;
+}
+.espresso-buttons{
+
+    margin-left:120px;
+
+
+}
+.espresso-wishlist{
+
+}
+
+
+#espresso-addToCart-Button{
+    width:150px;
+    height:40px;
+
+  margin-left:130px;
+    color:black;
+    font-size:25px;
+    background-color: rosybrown;
+}
+
+.machiatto-coffee{
+    padding:30px;
+    background-color:grey;
+    margin-top: 80px;
+    margin-right: 700px;
+    margin-left: 400px;
+    border-style: solid;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:5px;
+    height: 230px;
+
+}
+.machiatto-details{
+    display:flex;
+}
+.machiatto-image{
+    width:250px;
+    height:180px;
+}
+.machiatto-title{
+    margin-left:100px;
+    font-family: Arial;
+    font-size:30px;
+    font-weight: bolder;
+}
+.machiatto-info{
+    margin-left:0px;
+    font-family: Arial;
+    font-size:20px;
+    margin-top:20px;
+    font-weight: lighter;
+
+}
+.machiatto-buttons{
+    margin-left:120px;
+
+}
+#machiatto-addToCart-Button{
+    width:150px;
+    height:40px;
+
+   margin-left:130px;
+    color:black;
+    font-size:25px;
+    background-color: rosybrown;
+}
+
+
+.catalog-navigation-pages{
+    padding:5px;
+    background-color:grey;
+    margin-top: 180px;
+    margin-right: 700px;
+    margin-left: 400px;
+    border-style: solid;
+  display:flex;
+}
+.page-numbers-style{
+    color:white;
+    font-size:30px;
+    text-decoration:none;
+    padding:5px;
+   border:2px solid black;
+    background:black;
+    border-radius:40px;
+
+}
+.Coffee-Latte{
+    padding: 50px;
+    background-color: grey;
+    margin-top: 80px;
+    margin-right: 700px;
+    margin-left: 400px;
+    border-style: solid;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:5px;
+    height: 270px;
+
+}
+.CoffeeLatte-details{
+    display:flex;
+}
+.CoffeeLatte-image{
+    width:280px;
+    height:230px;
+}
+.CoffeeLatte-title{
+    margin-left:100px;
+    font-family: Arial;
+    font-size:30px;
+    font-weight: bolder;
+}
+.CoffeeLatte-info{
+    margin-left:0px;
+    font-family: Arial;
+    font-size:20px;
+    margin-top:20px;
+    font-weight: lighter;
+
+}
+.CoffeeLatte-buttons{
+    margin-left:120px;
+}
+#CoffeeLatte-addToCart-Button{
+    width:150px;
+    height:40px;
+    color:black;
+    font-size:25px;
+    margin-left:130px;
+    background-color: rosybrown;
+}
+
+
+.Cappuccino-coffee{
+    padding: 50px;
+    background-color: grey;
+    margin-top: 80px;
+    margin-right: 700px;
+    margin-left: 400px;
+    border-style: solid;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:5px;
+    height: 260px;
+}
+.Cappuccino-details{
+    display:flex;
+}
+.Cappuccino-image{
+    width:200px;
+    height:210px;
+}
+.Cappuccino-title{
+    margin-left:100px;
+    font-family: Arial;
+    font-size:30px;
+    font-weight: bolder;
+
+}
+.Cappuccino-info{
+    margin-left:0px;
+    font-family: Arial;
+    font-size:20px;
+    margin-top:20px;
+    font-weight: lighter;
+
+}
+
+.Cappuccino-buttons{
+    margin-left:190px;
+}
+#cappuccino-addToCart-Button{
+    width:150px;
+    height:40px;
+    color:black;
+    font-size:25px;
+    margin-left:130px;
+    background-color: rosybrown;
+}
+
+.catalog-navigation-pages-page2{
+    padding:5px;
+    background-color:grey;
+    margin-top: 120px;
+    margin-right: 700px;
+    margin-left: 400px;
+    border-style: solid;
+    display:flex;
+}
+.Miel-coffee{
+    padding: 50px;
+    background-color: grey;
+    margin-top: 50px;
+    margin-right: 700px;
+    margin-left: 400px;
+    border-style: solid;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:5px;
+    height: 290px;
+}
+.Miel-details{
+    display:flex;
+}
+.Miel-image{
+    width:225px;
+    height:216px;
+}
+.Miel-title{
+    margin-left:100px;
+    font-family: Arial;
+    font-size:30px;
+    font-weight: bolder;
+}
+.Miel-info{
+    margin-left:0px;
+    font-family: Arial;
+    font-size:20px;
+    margin-top:20px;
+    font-weight: lighter;
+}
+.Miel-buttons{
+    margin-left:180px;
+    display:flex;
+
+}
+#miel-addToCart-Button{
+    width:150px;
+    height:40px;
+    color:black;
+    font-size:25px;
+    margin-left:130px;
+    background-color: rosybrown;
+
+}
+
+.ConPanna-coffee{
+    padding: 50px;
+    background-color: grey;
+    margin-top: 50px;
+    margin-right: 700px;
+    margin-left: 400px;
+    border-style: solid;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:5px;
+    height: 230px;
+}
+.ConPanna-details{
+    display:flex;
+}
+.ConPanna-image{
+    width:230px;
+    height:190px;
+}
+.ConPanna-title{
+    margin-left:100px;
+    font-family: Arial;
+    font-size:30px;
+    font-weight: bolder;
+}
+.ConPanna-info{
+    margin-left:0px;
+    font-family: Arial;
+    font-size:20px;
+    margin-top:20px;
+    font-weight: lighter;
+}
+.ConPanna-buttons{
+    margin-left:170px;
+    display:flex;
+}
+#conpanna-addToCart-Button{
+    width:150px;
+    height:40px;
+    color:black;
+    font-size:25px;
+    background-color: rosybrown;
+    margin-left:130px;
+}
+
+.catalog-navigation-pages-page3{
+    padding:5px;
+    background-color:grey;
+    margin-top: 155px;
+    margin-right: 700px;
+    margin-left: 400px;
+    border-style: solid;
+    display:flex;
+}
+
+.Frappe-coffee{
+    padding: 50px;
+    background-color: grey;
+    margin-top: 100px;
+    margin-right: 700px;
+    margin-left: 400px;
+    border-style: solid;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:5px;
+    height: 320px;
+}
+.Frappe-details{
+    display:flex;
+}
+.Frappe-img{
+    width:230px;
+    height:200px;
+}
+.Frappe-title{
+    margin-left:100px;
+    font-family: Arial;
+    font-size:30px;
+    font-weight: bolder;
+}
+.Frappe-info{
+    margin-left:0px;
+    font-family: Arial;
+    font-size:20px;
+    margin-top:20px;
+    font-weight: lighter;
+}
+.Frappe-buttons{
+    margin-left:170px;
+    display:flex;
+
+}
+#frappe-addToCart-Button{
+    width:150px;
+    height:40px;
+    color:black;
+    font-size:25px;
+    background-color: rosybrown;
+    margin-left:130px;
+
+}
+
+
+.catalog-navigation-pages-page4{
+    padding:5px;
+    background-color:grey;
+    margin-top: 350px;
+    margin-right: 700px;
+    margin-left: 400px;
+    border-style: solid;
+    display:flex;
+}
+.page-numbers-style:hover{
+    background-color:white;
+    color:black;
+}
+.page-numbers-style:active{
+    background-color:orange;
+    color:black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

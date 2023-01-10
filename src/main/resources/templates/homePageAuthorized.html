@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/homePageStyle.css}">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>HomePageAuthorized</title>
+</head>
+<body>
+ <div class="homepage">
+    <nav>
+        <div class="coffeeshoplogo">
+            <img th:src="@{/img/CoffeeLogo.jpg}" class="logo-img">
+            ~ Coffee Shop ~
+        </div>
+        <ul class = "navigation-options">
+            <li><a th:href="@{/homePageAuthorized}">Catalog</a></li>
+
+            <li>
+                <img th:src="@{/img/download.png}" class="cart-picture">
+                <a th:href="@{/homePageAuthorized/MyCartPage}">My Cart</a>
+            </li>
+            <li>
+                <img th:src="@{/img/contact_img.png}" class="contact-picture">
+                <a th:href="@{/homePageAuthorized/ContactAuthorized}">Contact</a>
+            </li>
+            <li>
+                <p sec:authentication="principal.username"></p>
+            </li>
+            <li>
+                <img th:src="@{/img/logout_picture.png}" class="logout-logo">
+
+               <a th:href="@{/homePage}">Log out</a>
+
+
+               <!-- <a th:href="@{/homePage/}">Log out</a> -->
+            </li>
+
+        </ul>
+    </nav>
+
+
+    <div class="espresso-coffee">
+
+        <!--Here I will Add the Coffee Beverages *** -->
+
+        <div class="espresso-details">
+
+            <img class="espresso-img" th:src="@{/img/espresso.jpg}" alt="espresso-img">
+            <div class="espresso-title">
+                Espresso
+                <div class="espresso-info">
+                    <ul>
+                        <li>
+                            60 ml / cup
+                        </li>
+                        <li>
+                            1 cup = 6 RON
+                        </li>
+                    </ul>
+                    <div class="espresso-buttons">
+                        <form action="#" th:action="@{/process-espresso}" method="post">
+                        <input type="submit"  id="espresso-addToCart-Button" value="Add to Cart"></input>
+                        </form>
+
+                    </div>
+                </div>
+                <!-- Purchase Buuton-->
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="machiatto-coffee">
+        <div class="machiatto-details">
+            <img th:src="@{/img/machiatto.jpg}" class="machiatto-image" alt="machiatto-image-indisponible">
+            <div class="machiatto-title">
+                Machiatto
+
+                <div class="machiatto-info">
+                    <ul>
+                        <li>
+                            espresso =  1 cup (60 ml)
+                        </li>
+                        <li>
+                            frothed milk
+                        </li>
+                        <li>
+                            1 glass of Machiatto = 10 RON
+                        </li>
+                    </ul>
+                    <div class="machiatto-buttons">
+
+                          <form action="#" th:action="@{/process-machiatto}" method="post">
+                        <input type="submit"  id="machiatto-addToCart-Button" value="Add to Cart"></input>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Creating the navigation menu between catalog pages -->
+    <div class="catalog-navigation-pages">
+        <div class="page-numbers">
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            <a th:href="@{/homePageAuthorized}" class="page-numbers-style">1</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            <a th:href="@{/homePageAuthorized/CatalogPage2Authorized}" class="page-numbers-style">2</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            <a th:href="@{/homePageAuthorized/CatalogPage3Authorized}" class="page-numbers-style">3</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            <a th:href="@{/homePageAuthorized/CatalogPage4Authorized}" class="page-numbers-style">4</a>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

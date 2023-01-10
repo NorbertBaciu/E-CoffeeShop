@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalog Page 2 </title>
+  <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+  <link rel="stylesheet" th:href="@{/css/homePageStyle.css}">
+    <script th:src="@{/js/alerts.js}"></script>
+</head>
+<body>
+ <div class="homepage">
+    <nav>
+        <div class="coffeeshoplogo">
+            <img th:src="@{/img/CoffeeLogo.jpg}" class="logo-img">
+            ~ Coffee Shop ~
+        </div>
+        <ul class = "navigation-options">
+            <li><a th:href="@{/homePage}">Catalog</a></li>
+
+            <li>
+                <img th:src="@{/img/download.png}" class="cart-picture">
+                <a href="#">My Cart</a>
+            </li>
+            <li>
+                <img th:src="@{/img/contact_img.png}" class="contact-picture">
+                <a th:href="@{/homePage/contactPage}">Contact</a>
+            </li>
+            <li>
+                <img th:src="@{/img/login.png}" class="login-picture">
+                <a th:href="@{/homePage/loginPage}">Log In</a>
+            </li>
+            <li>
+                <img th:src="@{/img/register_logo.jpg}" class="register-logo">
+
+                <a th:href="@{/homePage/registerPage}">Register</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <!--Design the Another Type of Coffee -->
+    <div class="Coffee-Latte">
+         <div class="CoffeeLatte-details">
+             <img th:src="@{/img/coffee_latte.jpeg}" alt="Coffee Latte -Indisp" class="CoffeeLatte-image">
+             <div class="CoffeeLatte-title">
+                 Coffee Latte
+                 <div class="CoffeeLatte-info">
+                     <ul>
+                         <li>1 Cup Espresso ~ 60 ml</li>
+                         <li>Whiped Milk</li>
+                         <li>Milk Foam</li>
+                         <li>1 cup Latte Coffee = 11 RON</li>
+                     </ul>
+                     <div class="CoffeeLatte-buttons">
+                         <button type="button"  id="CoffeeLatte-addToCart-Button" onClick="alertMessage()">Add to Cart</button>
+                     </div>
+                 </div>
+
+             </div>
+         </div>
+    </div>
+
+     <!-- Design another Type of Coffee -->
+
+     <div class = "Cappuccino-coffee">
+         <div class="Cappuccino-details">
+             <img th:src="@{/img/cappuccino_image.jpg}" alt="Cappuccino-image-indisp" class="Cappuccino-image">
+
+             <div class="Cappuccino-title">
+                 Cappuccino
+                 <div class="Cappuccino-info">
+                     <ul>
+                         <li>
+                                1 Cup  Espresso
+                         </li>
+                         <li>
+                             Steamed Milk
+                         </li>
+                         <li>
+                             Foamed Milk
+                         </li>
+                         <li>
+                             1 cup Cappuccino = 10 RON
+                         </li>
+                     </ul>
+
+                     <div class="Cappuccino-buttons">
+
+
+                         <button type="button"  id="cappuccino-addToCart-Button" onClick="alertMessage()">Add to Cart</button>
+                         </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- Redirect pages from the Catalog -->
+     <div class="catalog-navigation-pages-page2">
+         <div class="page-numbers">
+             &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+             <a th:href="@{/homePage/catalogPage1}" class="page-numbers-style">1</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+             <a th:href="@{/homePage/catalogPage2}" class="page-numbers-style">2</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+             <a th:href="@{/homePage/catalogPage3}" class="page-numbers-style">3</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+             <a th:href="@{/homePage/catalogPage4.html}" class="page-numbers-style">4</a>
+         </div>
+ </div>
+ </div>
+</div>
+
+
+</body>
+</html>

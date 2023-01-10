@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/homePageStyle.css}">
+    <link rel="stylesheet" th:href="@{/css/mycartPageStyle.css}">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>My Cart Page</title>
+</head>
+<body>
+<div class="homepage">
+    <nav>
+        <div class="coffeeshoplogo">
+            <img th:src="@{/img/CoffeeLogo.jpg}" class="logo-img">
+            ~ Coffee Shop ~
+        </div>
+        <ul class = "navigation-options">
+            <li><a th:href="@{/homePageAuthorized}">Catalog</a></li>
+
+            <li>
+                <img th:src="@{/img/download.png}" class="cart-picture">
+                <a href="#">My Cart</a>
+            </li>
+            <li>
+                <img th:src="@{/img/contact_img.png}" class="contact-picture">
+                <a th:href="@{/homePageAuthorized/ContactAuthorized}">Contact</a>
+            </li>
+            <li>
+                <p sec:authentication="principal.username"></p>
+            </li>
+            <li>
+                <img th:src="@{/img/logout_picture.png}" class="logout-logo">
+
+                <a th:href="@{/homePage}">Log out</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <!-- Here I will implement the Frontend of the MyCart table -->
+
+    <table class="table table-bordered" id="mycart-table">
+   <thead class="thead-dark" id="table-head">
+       <th>Nr.crt</th>
+      <th>Coffee Type</th>
+      <th>Quantity</th>
+     <th>Price</th>
+   <th>Update Quantity</th>
+   <th>Delete Product</th>
+   </thead>
+        < th:each="tempProduct : ${listMyCartElements}">
+        </th:each>
+
+        <tbody id="table-body">
+        <th:block th:each="myCartProducts : ${listMyCartElements}">
+
+            <tr>
+                <td>[[${myCartProducts.orderId}]]</td>
+                <td>[[${myCartProducts.theProduct.coffeeType}]]</td>
+                <td>[[${myCartProducts.numberOfCoffees}]]</td>
+                <td>[[${myCartProducts.totalPrice}]]</td>
+                <td>
+                    <form action="#" th:action="@{/process-update/{id}/{productId}(id=${myCartProducts.orderId},productId=${myCartProducts.theProduct.prodId})}"
+                          th:object="${myCartProd}"  method="get">
+
+                        <input type="number"  th:field="*{numberOfCoffees}">
+                        <input  type="submit" value="Select" > Submit
+
+                    </form>
+
+                </td>
+                <td>
+                    <a th:href="@{/deleteProduct/{id}(id=${myCartProducts.orderId})}">
+                        Delete Product
+                    </a>
+                </td>
+            </tr>
+
+        </th:block>
+
+        </tbody>
+    </table>
+     <div class="total-pay">
+         Total Price :  &nbsp &nbsp <p th:text="${totalPrice}"  ></p>  &nbsp  RON  &nbsp &nbsp
+         <a th:href="@{/homePageAuthorized/OrderPage}" id="orderButton">Order It!
+         </a>
+     </div>
+
+</div>
+
+</body>
+</html>

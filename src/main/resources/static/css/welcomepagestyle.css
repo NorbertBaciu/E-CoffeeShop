@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+
+
+.welcomePage{
+   width:100%;
+    height : 100vh;
+    background-image:url("../img/background_coffee.jpg"),
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75));
+    background-size:cover;
+    background-position:center;
+    opacity:0.9;
+}
+.heading_message{
+    text-align:center;
+    font-size:50px;
+}
+.heading_welcome_message{
+  text-align:center;
+    font-size:50px;
+    font-family: "Brush Script MT";
+}
+.container{
+    /*margin-left:950px;
+    margin-right:500px;
+    border-color:white; */
+    text-align:center;
+}
+
+

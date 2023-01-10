@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+  <link rel="stylesheet" th:href="@{/css/homePageStyle.css}">
+    <title>CatalogPage2Authorized</title>
+</head>
+<body>
+<div class="homepage">
+  <nav>
+    <div class="coffeeshoplogo">
+      <img th:src="@{/img/CoffeeLogo.jpg}" class="logo-img">
+      ~ Coffee Shop ~
+    </div>
+    <ul class = "navigation-options">
+      <li><a th:href="@{/homePageAuthorized}">Catalog</a></li>
+
+      <li>
+        <img th:src="@{/img/download.png}" class="cart-picture">
+        <a th:href="@{/homePageAuthorized/MyCartPage}">My Cart</a>
+      </li>
+      <li>
+        <img th:src="@{/img/contact_img.png}" class="contact-picture">
+        <a th:href="@{/homePageAuthprized/ContactAuthorized}">Contact</a>
+      </li>
+      <li>
+        <p sec:authentication="principal.username"></p>
+      </li>
+      <li>
+        <img th:src="@{/img/logout_picture.png}" class="logout-logo">
+
+        <a th:href="@{/homePage}">Log out</a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <!--Design the Another Type of Coffee -->
+  <div class="Coffee-Latte">
+    <div class="CoffeeLatte-details">
+      <img th:src="@{/img/coffee_latte.jpeg}" alt="Coffee Latte -Indisp" class="CoffeeLatte-image">
+      <div class="CoffeeLatte-title">
+        Coffee Latte
+        <div class="CoffeeLatte-info">
+          <ul>
+            <li>1 Cup Espresso ~ 60 ml</li>
+            <li>Whiped Milk</li>
+            <li>Milk Foam</li>
+            <li>1 cup Latte Coffee = 11 RON</li>
+          </ul>
+          <div class="CoffeeLatte-buttons">
+
+            <form action="#" th:action="@{/process-latte}" method="post">
+            <input type="submit"  id="CoffeeLatte-addToCart-Button" value="Add to Cart"></input>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Design another Type of Coffee -->
+
+  <div class = "Cappuccino-coffee">
+    <div class="Cappuccino-details">
+      <img th:src="@{/img/cappuccino_image.jpg}" alt="Cappuccino-image-indisp" class="Cappuccino-image">
+
+      <div class="Cappuccino-title">
+        Cappuccino
+        <div class="Cappuccino-info">
+          <ul>
+            <li>
+              1 Cup  Espresso
+            </li>
+            <li>
+              Steamed Milk
+            </li>
+            <li>
+              Foamed Milk
+            </li>
+            <li>
+              1 cup Cappuccino = 10 RON
+            </li>
+          </ul>
+
+          <div class="Cappuccino-buttons">
+
+            <form action="#" th:action="@{/process-cappuccino}" method="post">
+            <input type="submit"  id="cappuccino-addToCart-Button" value="Add to Cart"></input>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Redirect pages from the Catalog -->
+  <div class="catalog-navigation-pages-page2">
+    <div class="page-numbers">
+      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      <a th:href="@{/homePageAuthorized}" class="page-numbers-style">1</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      <a th:href="@{/homePageAuthorized/CatalogPage2Authorized}" class="page-numbers-style">2</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      <a th:href="@{/homePageAuthorized/CatalogPage3Authorized}" class="page-numbers-style">3</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      <a th:href="@{/homePageAuthorized/CatalogPage4Authorized}" class="page-numbers-style">4</a>
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

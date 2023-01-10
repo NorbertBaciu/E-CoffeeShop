@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+  <link rel="stylesheet" th:href="@{/css/homePageStyle.css}">
+  <link rel="stylesheet" th:href="@{/css/contactPageStyle.css}">
+    <title>ContactAuthorizedPage</title>
+</head>
+<body>
+<div class="homepage">
+  <nav>
+    <div class="coffeeshoplogo">
+      <img th:src="@{/img/CoffeeLogo.jpg}" class="logo-img">
+      ~ Coffee Shop ~
+    </div>
+    <ul class = "navigation-options">
+      <li><a th:href="@{/homePageAuthorized}">Catalog</a></li>
+
+      <li>
+        <img th:src="@{/img/download.png}" class="cart-picture">
+        <a th:href="@{/homePageAuthorized/MyCartPage}">My Cart</a>
+      </li>
+      <li>
+        <img th:src="@{/img/contact_img.png}" class="contact-picture">
+        <a th:href="@{/homePageAuthorized/ContactAuthorized}">Contact</a>
+      </li>
+      <li>
+        <p sec:authentication="principal.username"></p>
+      </li>
+      <li>
+        <img th:src="@{/img/logout_picture.png}" class="logout-logo">
+
+        <a th:href="@{/homePage}">Log out</a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <!-- Design the Contact Informations -->
+  <div class="contact-container">
+    Dezvoltator : Baciu Norbert Sorin<br>
+    E-mail : baciu_norbert@yahoo.com <br>
+    Telefon : + (40) 757 646 147 <br>
+    Adresa : Strada Stejarului , Nr.6 , Blc.C6 , Ap.10<br>
+    Locatie : Romania , Jud.Cluj , Loc.Gherla<br>
+    Cod Postal : 405300 <br>
+    Ocupatie : Student , Univ. Tehnica Cluj-Napoca , Fac. Automatica si Calculatoare , An 4 <br>
+  </div>
+</div>
+
+
+</body>
+</html>

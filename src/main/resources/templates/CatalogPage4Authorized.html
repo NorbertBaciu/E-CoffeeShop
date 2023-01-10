@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+  <link rel="stylesheet" th:href="@{/css/homePageStyle.css}">
+    <title>CatalogPage4Authorized</title>
+</head>
+<body>
+<div class="homepage">
+  <nav>
+    <div class="coffeeshoplogo">
+      <img th:src="@{/img/CoffeeLogo.jpg}" class="logo-img">
+      ~ Coffee Shop ~
+    </div>
+    <ul class = "navigation-options">
+      <li><a th:href="@{/homePageAuthorized}">Catalog</a></li>
+
+      <li>
+        <img th:src="@{/img/download.png}" class="cart-picture">
+        <a th:href="@{/homePageAuthorized/MyCartPage}">My Cart</a>
+      </li>
+      <li>
+        <img th:src="@{/img/contact_img.png}" class="contact-picture">
+        <a th:href="@{/homePageAuthorized/ContactAuthorized}">Contact</a>
+      </li>
+      <li>
+        <p sec:authentication="principal.username"></p>
+      </li>
+      <li>
+        <img th:src="@{/img/logout_picture.png}" class="logout-logo">
+
+        <a th:href="@{/homePage}">Log out</a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <!--Here I will Add the Coffee Types -->
+  <div class="Frappe-coffee">
+    <div class="Frappe-details">
+      <img th:src="@{/img/frappe-coffee.jpg}" alt="Frappe-Coffee-Indisp" class="Frappe-img">
+      <div class="Frappe-title">
+        Frappe Coffee
+        <div class="Frappe-info">
+          <ul>
+            <li>
+              Strong Coffee ~ 200 ml
+            </li>
+            <li>
+              Whole Milk ~ 500ml
+            </li>
+            <li>
+              Whiped Cream
+            </li>
+            <li>
+              Ice Cubes
+            </li>
+            <li>
+              Chocolate Syrup
+            </li>
+            <li>
+              1 glass Frappe Coffee = 17 RON
+            </li>
+          </ul>
+          <div class="Frappe-buttons">
+
+            <form action="#" th:action="@{/process-frappe}" method="post">
+            <input type="submit"  id="frappe-addToCart-Button" value="submit"></input>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="catalog-navigation-pages-page4">
+    <div class="page-numbers">
+      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      <a th:href="@{/homePageAuthorized}" class="page-numbers-style">1</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      <a th:href="@{/homePageAuthorized/CatalogPage2Authorized}" class="page-numbers-style">2</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      <a th:href="@{/homePageAuthorized/CatalogPage3Authorized}" class="page-numbers-style">3</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      <a th:href="@{/homePageAuthorized/CatalogPage4Authorized}" class="page-numbers-style">4</a>
+    </div>
+  </div>
+
+</div>
+
+
+
+</body>
+</html>

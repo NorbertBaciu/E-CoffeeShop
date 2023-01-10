@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/homePageStyle.css}">
+    <link rel="stylesheet" th:href="@{/css/orderPageStyle.css}">
+    <title>Order Page</title>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+
+</head>
+<body>
+<div class="homepage">
+    <nav>
+        <div class="coffeeshoplogo">
+            <img th:src="@{/img/CoffeeLogo.jpg}" class="logo-img">
+            ~ Coffee Shop ~
+        </div>
+        <ul class = "navigation-options">
+            <li><a th:href="@{/homePageAuthorized}">Catalog</a></li>
+
+            <li>
+                <img th:src="@{/img/download.png}" class="cart-picture">
+                <a th:href="@{/homePageAuthorized/MyCartPage}">My Cart</a>
+            </li>
+            <li>
+                <img th:src="@{/img/contact_img.png}" class="contact-picture">
+                <a th:href="@{/homePageAuthorized/ContactAuthorized}">Contact</a>
+            </li>
+            <li>
+                <p sec:authentication="principal.username"></p>
+            </li>
+            <li>
+                <img th:src="@{/img/logout_picture.png}" class="logout-logo">
+
+                <a th:href="@{/homePage}">Log out</a>
+            </li>
+
+        </ul>
+    </nav>
+    <div class="order-payment-title">
+        Order & Payment Details
+    </div>
+
+    <div class="user-info-block">
+      <form action="#" th:action="@{/process-userdetails}"  id="customer-details-form" th:object="${userDetails}" method="post">
+       <label id="customer-details-title">Customer Details</label>
+          <br> <br>
+
+          <label id="customer-address-label" >Address</label>
+          <input type="text" id="customer-address-textbox" name="address" th:field="*{address}">
+
+          <br><br>
+          <label id="customer-city-address"> City</label>
+          <input type="text" id="customer-city-textbox" name="city" th:field="*{city}">
+          <br><br>
+          <label id="customer-county-label"> County(Judet)</label>
+          <input type="textbox" id="customer-county-textbox" name="county" th:field="*{county}">
+          <br><br>
+          <label id="customer-country-label">Country</label>
+          <input type="textbox" id="customer-country-textbox" name="Country" th:field="*{country}">
+          <br><br>
+          <label id="customer-postalcode-label">PostalCode</label>
+          <input type="text" id="customer-postalcode-textbox" name="textbox" th:field="*{postalcode}">
+          <br><br>
+          <label id="customer-phonenumber-label">PhoneNumber </label>
+          <input type="text" id="customer-phonenumber-textbox" name="phonenumber" th:field="*{phoneNumber}">
+          <br><br>
+          <input type="submit" value="Confirm Details" id="customer-confirmdetails-button">
+      </form>
+        <form action="#" th:action="@{/process-cardpayment}" id="card-payment-form" th:object="${cartPayment}" method="post">
+           <label id="card-payment-title"> ~ Card Payment ~  </label>
+            <br><br>
+            <label id="card-payment-number">Cart Number</label>
+            <input type="text" placeholder="Enter Cart Number" id="card-payment-number-textbox" th:field="*{cartNumber}">
+
+            <br><br>
+            <label id="card-payment-name-label">Cart Holder</label>
+            <input type="text" placeholder="Enter the Name on the Card" id="card-payment-name-textbox" th:field="*{cartName}">
+            <br><br><br><br>
+            <label id="card-payment-expirydate">Expiry Date*</label>
+            <label id="card-payment-ccv">CCV*</label>
+            <br>
+            <input type="month" id="card-payment-month" placeholder="month" th:field="*{expiryDate}">
+            <input type="text" id="card-payment-ccv-textbox" placeholder="ccv" th:field="*{cvv}">
+            <br><br><br>
+            <input type="submit" id="pay-button" value="Pay Now">
+
+        </form>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>
