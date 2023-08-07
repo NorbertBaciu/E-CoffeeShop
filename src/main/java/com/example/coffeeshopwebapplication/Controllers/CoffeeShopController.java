@@ -11,14 +11,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class CoffeeShopController {
 
-
-
     @GetMapping("/welcome")
     public String showWelcomePage(){
         return "welcomePage";
     }
-
-
 
     @GetMapping("/homePage")
     public String showHomePage(){

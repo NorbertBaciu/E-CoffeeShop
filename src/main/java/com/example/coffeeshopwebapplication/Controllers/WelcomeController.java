@@ -13,12 +13,8 @@ import java.util.List;
 @Controller
 public class WelcomeController {
 
-
-  // This is just a test to make sure the Repository and Service are implemented Correctly
     @RequestMapping("")
     public String showWelcomePage(){
-
-
         return "welcomePage.html";
     }
 }

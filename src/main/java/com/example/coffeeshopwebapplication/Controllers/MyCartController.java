@@ -38,9 +38,7 @@ public class MyCartController {
         // after this we need to use the method to retrieve the current Authenticated User
 
        Customer  currentCustomer = myCartService.getCurrentlyLoggedInCustomer();
-
         System.out.println(currentCustomer);
-
 
         // after all this we need to save the data [current logged in user , selectedProduct , quantity(defualt 1) , and total_price=1)
         // in the order_items DB

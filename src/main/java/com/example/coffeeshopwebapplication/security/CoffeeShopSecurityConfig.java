@@ -23,9 +23,7 @@ public class CoffeeShopSecurityConfig extends WebSecurityConfigurerAdapter {
 
         // this method is used to authentificate the user that is stored in the database based on his username and password
         authentication.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
-
     }
-
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception{
         httpSecurity.csrf().disable();

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class RegistrationController {
     @Autowired
     private CoffeeShopCustomerRepository theCustomerRepository;
+
     @Autowired
     private CoffeeShopMyCartRepository myCartRepository;
 
@@ -30,14 +31,10 @@ public class RegistrationController {
 
         theCustomerRepository.save(theCustomer);
 
-
         System.out.println("User Registred...Check the DB");
-
-
 
         return "redirect:/homePage/loginPage";
 
     }
-
 
 }
